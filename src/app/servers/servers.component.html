@@ -2,17 +2,35 @@
   <div class="row">
     <div class="col-xs-12">
       <label> Server Name</label>
-      <input
+      <hr>
+     <!--<input
         type="text"
         class="form-control"
         (input)= "onUpdateServerName($event)"
       >
-      <p> {{ serverName }}</p>
-      <button
+
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="serverName"
+      >-->
+      <!--<p> {{ serverName }}</p>-->
+
+      <input
+        type="text"
+        [(ngModel)]="userName"
+        (input)="check($event)"
+      >
+      <button class="btn btn-danger" [disabled]="!allowNewUser" (click)="resetString()">
+        Add user
+      </button>
+      <p> Username: {{ userName }}</p>
+      <!-- <button
         class="btn btn-primary"
         [disabled]="!allowNewServer"
         (click) = "onCreateServer()"
       > Add server </button>
+      -->
       <p [innerText]="allowNewServer"> </p>
       <p> {{serverCreation}}</p>
     </div>
