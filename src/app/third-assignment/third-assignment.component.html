@@ -1,0 +1,29 @@
+<script src="third-assignment.component.ts"></script>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <p>
+        Third-assignment
+      </p>
+      <input
+        type="text"
+        class="form-control"
+      >
+      <button
+        class="btn btn-primary"
+        (click)="display()"
+      >
+        Display details
+      </button>
+      <p *ngIf="displayed"> Secret password = tuna</p>
+      <div
+        *ngFor="let logItem of logs"
+        [ngStyle]="{backgroundColor: logItem >= 5 ? 'blue' : 'transparent'}"
+        [ngClass]="{'white-text': logItem >= 5}"
+      >
+        {{ logItem }}
+      </div>
+     <!-- <p *ngFor="let number of logs"> {{ logs }} </p>-->
+    </div>
+  </div>
+</div>
