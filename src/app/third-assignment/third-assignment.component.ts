@@ -19,7 +19,8 @@ export class ThirdAssignmentComponent implements OnInit {
   display() {
     this.displayed = !this.displayed;
     this.number++;
-    this.logs.push(this.number);
+    //this.logs.push(this.number);
+    this.logs.push(new Date());
     if (this.number > 5)
     {
 
